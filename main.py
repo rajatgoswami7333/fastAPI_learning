@@ -90,7 +90,7 @@ def create_patient (patient: Patient):
 
     data = load_data()
 
-    #does the given patient id already exist, then raise error
+    #does the given patient id already exist, if yes then raise error
 
     if patient.id in data:
         raise HTTPException(status_code=400, detail="patient already exists!")
